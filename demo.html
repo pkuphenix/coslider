@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>COslider - Coupled Sliders</title>
+		<link type="text/css" rel="stylesheet" href="css/jquery-ui-themes-1.8.21/themes/base/jquery.ui.all.css" />
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
+		<script type="text/javascript" src="http://jqueryui.com/themeroller/themeswitchertool/"></script>
+		<script type="text/javascript" src="coslider.js"></script>
+	</head>
+	<body style="font-size:62.5%;background:#5F5F5F url('bg.png') repeat-x scroll;">
+	<style type="text/css">
+		* {margin:0;padding:0;}
+		.mainbox {width:1000px;margin:0 auto;padding:50px;background:white;font-family:"Trebuchet MS","Arial","Helvetica","Verdana","sans-serif";}
+		p{color:#888;margin-bottom:10px;border:#CCC dashed 1px;padding:5px;font-family:"Courier New","Monospace";}
+		h5 {font-size:12px;}
+	</style>
+	<div class="mainbox">	
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#switcher').themeswitcher({'loadTheme':'Hot sneaks'});
+				$('#target1').coslider({'name':'coslider2', 'direction':'vertical', 'length':'100', 'count':5, 'initvalues':[10, 20, 30, 15, 25]});
+				$('#target2').coslider({'name':'coslider1', 'direction':'horizonal', 'length':'500', 'initvalues':[10, 20, 30, 40]});
+				$('#target3').coslider({'name':'coslider3', 'direction':'horizonal', 'max':'1000', 'count':3, 'initvalues':[500, 400, 100], 'labels':['Macbook Air','Macbook Pro','Retina Pro'],'labelprefix':'$','labelsuffix':''});
+				$('#target4').coslider({'name':'coslider4', 'direction':'horizonal', 'length':'500', 'count':2, 'initvalues':[30, 40], 'labellocation':'before'});
+				$('#target5').coslider({'name':'coslider5', 'direction':'horizonal', 'length':'500', 'count':2, 'initvalues':[30, 40]});
+				$('#target6').coslider({'name':'coslider6', 'direction':'vertical', 'length':'400', 'count':12, 'initvalues':[40, 60, 20, 20, 20]});
+				$('#accordion').accordion({'autoHeight':false});
+			});
+			
+			var oninit7 = function(){};
+		</script>
+		<h1>COslider</h1>
+		<h3>-- Coupled Sliders as a jQuery plugin</h4><br />
+		<div id="accordion">
+		<h5><a href="#">Vertical Sliders</a></h5>
+		<div>
+			<p>$('#target1').coslider({'name':'coslider2', 'direction':'vertical', 'length':'100', 'count':5, 'initvalues':[10, 20, 30, 15, 25]});</p>
+			<div id="target1" class="targetbox">
+			The sliders are rendered here.
+			</div>
+		</div>
+		<h5><a href="#">Horizonal Sliders</a></h5>
+		<div>
+			<p>$('#target2').coslider({'name':'coslider1', 'direction':'horizonal', 'length':'500', 'initvalues':[10, 20, 30, 40]});</p>
+			<div id="target2" class="targetbox">
+			The sliders are rendered here.
+			</div>
+		</div>
+		<h5><a href="#">Big Range and Custom Labels</a></h5>
+		<div>
+			<p>$('#target3').coslider({'name':'coslider3', 'direction':'horizonal', 'max':'1000', 'count':3, 'initvalues':[500, 400, 100], 'labels':['Macbook Air','Macbook Pro','Retina Pro'],'labelprefix':'$','labelsuffix':''});</p>
+			<div id="target3" class="targetbox">
+			The sliders are rendered here.
+			</div>
+		</div>
+		<h5><a href="#">Custom Label Location</a></h5>
+		<div>
+			<p>$('#target4').coslider({'name':'coslider4', 'direction':'horizonal', 'length':'500', 'count':2, 'initvalues':[30, 40], 'labellocation':'before'});</p>
+			<div id="target4" class="targetbox">
+			The sliders are rendered here.
+			</div>
+		</div>
+		<h5><a href="#">Custom Theme</a></h5>
+		<div>
+			<p>$('#target5').coslider({'name':'coslider5', 'direction':'horizonal', 'length':'500', 'count':2, 'initvalues':[30, 40]});</p>
+			<p>&lt;script type="text/javascript" src="http://jqueryui.com/themeroller/themeswitchertool/"&gt;&lt;/script&gt;</p>
+			<p>$('#switcher').themeswitcher({'loadTheme':'Hot sneaks'});</p>
+			Pick Your Theme: 
+			<div id="switcher"></div><br/>
+			<div id="target5" class="targetbox">
+			The sliders are rendered here.
+			</div>
+		</div>
+		<h5><a href="#">Smooth With A Couple of Sliders</a></h5>
+		<div>
+			<p>$('#target6').coslider({'name':'coslider6', 'direction':'vertical', 'length':'400', 'count':12, 'initvalues':[40, 60, 20, 20, 20]});</p>
+			<div id="target6" class="targetbox">
+			The sliders are rendered here.
+			</div>
+		</div>
+		<h5><a href="#">Callback Functions</a></h5>
+		<div>
+			<p>$('#target7').coslider({'name':'coslider7', 'direction':'vertical', 'length':'100', 'count':4, 'initvalues':[40, 60, 20, 20],
+						'oninit':oninit7, 'onchange':onchange7});</p>
+			<input id="btn7" type="button" value="Display Sliders" /><br /><br />
+			<div id="target7" class="targetbox">
+			The sliders are rendered here.
+			</div><br /><br />
+			<div id="status7" style="clear:both;color:red;">The status is updated here</div>
+			<script type="text/javascript">
+				var oninit7 = function(){
+					$("#status7").html("Sliders are initialized");
+				};
+				var onchange7 = function(index, values){
+					var txt = "Slider "+index+" is moved, current values are: ";
+					for (var i = 0; i < values.length; i++) {
+						txt += (values[i] + " ");
+					}
+					$("#status7").html(txt);
+				};
+				$("#btn7").click(function(e){
+					$('#target7').coslider({'name':'coslider7', 'direction':'vertical', 'length':'100', 'count':4, 'initvalues':[40, 60, 20, 20],
+						'oninit':oninit7, 'onchange':onchange7});
+				});
+			</script>
+		</div>
+		</div><br />
+		<h3>Ready to go ? Check a simplest example <a href="example.html">here</a></h4>
+	</div>
+	</body>
+</html>

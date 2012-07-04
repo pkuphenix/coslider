@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>COslider - Coupled Sliders</title>
+		<link type="text/css" href="css/jquery-ui-themes-1.8.21/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
+		<script type="text/javascript" src="coslider.js"></script>
+	</head>
+	<body style="font-size:62.5%;background:#5F5F5F url('bg.png') repeat-x scroll;">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#target').coslider({'name':'coslider2', 'direction':'vertical', 'length':'100', 'count':5, 'initvalues':[10, 20, 30, 15, 25]});
+		});
+	</script>
+	<div id="target">
+		The sliders are rendered here.
+	</div>
+	</body>
+</html>

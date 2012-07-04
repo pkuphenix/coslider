@@ -3,6 +3,10 @@
 ##Usage
 Please refer to `Coslider_Deploy_Guide.doc` for detailed usage.
 
+##Demo
+Check the demo here: <http://gushingach.tk/exp/coslider/demo.html>
+![The Screenshot](https://github.com/pkuphenix/coslider/raw/master/coslider.png)
+
 ##Package file list:
 - **css**: directory containing jQueryUI CSS files
 - **js**: directory containing jQuery javascript files

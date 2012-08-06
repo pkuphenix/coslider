@@ -4,7 +4,7 @@
 Please refer to `Coslider_Deploy_Guide.doc` for detailed usage.
 
 ##Demo
-Check the demo here: <http://gushingach.tk/exp/coslider/demo.html>
+Check the demo here: <http://lqian.net/exp/coslider/demo.html>
 ![The Screenshot](https://github.com/pkuphenix/coslider/raw/master/coslider.png)
 
 ##Package file list:
